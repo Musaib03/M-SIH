@@ -13,10 +13,10 @@ const SIDEBAR_ITEMS = [
 	{ name: "Transcation-Status", icon: Users,color: "#8B5CF6", href: "/products" },
 	{ name: "Wallet-Status", icon: ShoppingBag,  color: "#EC4899", href: "/users" },
 	
-	{ name: "Investigate", icon: TrendingUp },
+	
 	
 	{ name: "Scrapper", icon: UtilityPole, color: "#3B82F6", href: "/analytics" },
-	{ name: "Settings", icon: Settings, color: "#6EE7B7", href: "/settings" },
+	{ name: "DeMixer", icon: Settings, color: "#6EE7B7", href: "/settings" },
 ];
 
 const Sidebar = () => {

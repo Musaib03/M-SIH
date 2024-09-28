@@ -11,6 +11,12 @@ import re
 from dotenv import load_dotenv
 import os
 
+#demixer
+from .blockchain_client import BlockchainClient
+from .demixer import BestMixerDemixer, BestMixerLTCDemixer
+from .wallet_explorer_client import WalletExplorerClient
+import random
+
 # Load environment variables from .env file
 load_dotenv()
 
@@ -124,3 +130,71 @@ def scrape_view(request):
         return JsonResponse({'error': 'Invalid platform selected'}, status=400)
 
     return JsonResponse({'error': 'Invalid request method'}, status=400)
+
+#Demixer added
+
+def generate_new_address():
+    return f"bc1q{random.randint(10000000000000000, 99999999999999999)}"
+
+# Process the find_matching_transactions logic
+@csrf_exempt
+def find_matching_transactions(request):
+    if request.method == 'POST':
+        try:
+            # Parse JSON input from React frontend
+            data = json.loads(request.body)
+            txid = data.get('txid', '').strip()
+            currency = data.get('currency', '').strip().lower()
+            cluster_db = data.get('cluster_db', '').strip().lower()
+            mixer = data.get('mixer', '').strip().lower()
+            search_type = data.get('search_type', '').strip().lower()
+
+            if cluster_db != 'we':
+                return JsonResponse({"error": "Invalid cluster db! Only 'we' is supported."}, status=400)
+            if mixer != 'bestmixer':
+                return JsonResponse({"error": "Invalid mixer! Only 'bestmixer' is supported."}, status=400)
+            if currency not in ['btc', 'ltc']:
+                return JsonResponse({"error": "Invalid currency! Only BTC and LTC are supported."}, status=400)
+            if not txid or not currency or not cluster_db or not mixer or not search_type:
+                print("fields no avilable")
+            # Example involved parties (mocked data)
+            involved_parties_incoming = [
+                {"address": "bc1qw8wrek2m7nlqldll66ajnwr9mh64syvkt67zlu", "amount": "2.89689993 BTC"},
+                {"address": "bc1qw8wrek2m7nlqldll66ajnwr9mh64syvkt67zlu", "amount": "0.95072537 BTC"},
+                {"address": "bc1qw8wrek2m7nlqldll66ajnwr9mh64syvkt67zlu", "amount": "0.51284643 BTC"},
+            ]
+
+            involved_parties_outgoing = [
+                {"address": "bc1pf6sppcppr5cn4nfgml08j5cd7x7y35rutv3pmhmselncu4...", "amount": "0.00211165 BTC"},
+                {"address": "bc1qw8wrek2m7nlqldll66ajnwr9mh64syvkt67zlu", "amount": "2.89471178 BTC"},
+                {"address": "3KMLz1FtwmLVzQFq2i7rp3Hgdb3FERKc11", "amount": "0.01467712 BTC"},
+                {"address": "bc1qw8wrek2m7nlqldll66ajnwr9mh64syvkt67zlu", "amount": "0.93597725 BTC"},
+                {"address": "bc1qw8wrek2m7nlqldll66ajnwr9mh64syvkt67zlu", "amount": "0.49881907 BTC"},
+            ]
+
+            # Determine real receiver address
+            real_receiver_address = "bc1qw8wrek2m7nlqldll66ajnwr9mh64syvkt67zlu"
+            real_receiver_amount = None
+            for party in involved_parties_outgoing:
+                if party['address'] == real_receiver_address:
+                    real_receiver_amount = party['amount']
+                    break
+
+            if not real_receiver_amount:
+                real_receiver_amount = "N/A (Generated Dummy Address)"
+
+            result = {
+                'incoming': involved_parties_incoming if search_type in ["in", "all"] else [],
+                'outgoing': involved_parties_outgoing if search_type in ["out", "all"] else [],
+                'real_receiver': {
+                    'address': real_receiver_address,
+                    'amount': real_receiver_amount,
+                }
+            }
+
+            return JsonResponse(result, status=200)
+        
+        except json.JSONDecodeError:
+            return JsonResponse({"error": "Invalid input data"}, status=400)
+
+    return JsonResponse({"error": "Invalid request method"}, status=405)
