@@ -1,0 +1,62 @@
+/* Container for input and icon */
+.search-container {
+    position: relative;
+    width: 300px;
+    margin: 40px auto;
+    z-index: 1000;
+    margin-left: 300px;
+    
+    
+   
+  }
+  
+  /* Input box styling */
+  .p1 {
+    width: 400px;
+    padding: 10px 40px 10px 10px; /* Add padding-right to make space for the icon */
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    background-color: whitesmoke;
+    color: black;
+  }
+  
+  .p1:focus {
+    border-color:rgba(255, 255, 255, 0.744);
+  }
+  
+  /* Search icon styling */
+  .search-icon {
+    position: absolute;
+    left: 450px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+   
+    width: 30px;
+  
+  }
+
+  
+  /* Button styling */
+  .p button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    background-color:tomato;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .p button:hover {
+    background-color: #0056b3;
+  }
+  .users{
+    width: 40px;
+  }
+ 

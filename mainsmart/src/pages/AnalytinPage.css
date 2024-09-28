@@ -1,0 +1,80 @@
+/* General styling */
+.App {
+	font-family: Arial, sans-serif;
+	text-align: center;
+	padding: 20px;
+	color: white;
+  }
+  
+  h1 {
+	color: #333;
+  }
+  
+  h2 {
+	color: white;
+	margin-top: 20px;
+  }
+  
+  /* Search form styling */
+  .form {
+	margin-bottom: 20px;
+  }
+  
+  .search-input {
+	width: 60%;
+	padding: 10px;
+	font-size: 16px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-right: 10px;
+  }
+  
+  .submit-button {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #007BFF;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  .submit-button:hover {
+	background-color: #0056b3;
+  }
+  
+  /* Results table styling */
+  .results-table {
+	width: 80%;
+	margin: 0 auto;
+	border-collapse: collapse;
+  }
+  
+  .results-table th, .results-table td {
+	border: 1px solid #ddd;
+	padding: 8px;
+  }
+  
+  .results-table th {
+	background-color: #007BFF;
+	color: white;
+	font-weight: bold;
+	text-align: left;
+  }
+  
+  .results-table tr:nth-child(even) {
+	background-color: black;
+  }
+  .platform-select{
+	padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    width: 500px;
+    color: black;
+  }
+
+  

@@ -1,0 +1,145 @@
+
+.cal1 {
+    font-family: Arial, sans-serif;
+ 
+    padding: 20px;
+    border-radius: 10px;
+   
+    margin: 0 auto;
+    color: black;
+    
+  }
+  
+  .cal2 {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  
+  /* Input field for address */
+  input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 500px;
+    color: black;
+  }
+  
+  /* Dropdown for selecting network */
+  .selects {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    width: 500px;
+    color: black;
+  }
+  
+  /* Submit button */
+  .btncal {
+    padding: 10px;
+    background-color: rgb(0, 157, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 500px;
+  }
+  
+  .btncal:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Error message styling */
+  p[style*="color: red"] {
+    color: #ff4d4f;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  /* Loading message */
+  p {
+    text-align: center;
+    color: black;
+  }
+  
+  /* Data display section */
+  .cal3 {
+    color: black;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  div p {
+    margin: 5px 0;
+    font-size: 14px;
+    color:white;
+  }
+  
+  .cal4 {
+    overflow-y: scroll;
+    width: 600px;
+    justify-content: space-around;
+    
+  }
+  /* Styling for table */
+.calc5 table {
+    width: 70%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    margin-left: 150px;
+    margin-top: 40px;
+    color: black;
+  }
+  
+  .calc5 th, .calc5 td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    background-color: white;
+  }
+  
+  /* Header style */
+  .calc5 th {
+    background-color: #ddd;
+    color: black;
+    font-weight: bold;
+  }
+  
+  /* Alternating row colors */
+  .calc5 tr:nth-child(even) {
+    background-color: #f3f3f3;
+  }
+  
+  /* Hover effect for rows */
+  .calc5 tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .calc5 td {
+    
+  }
+  
+  /* Adjust table text */
+  .calc5 td p {
+    margin: 0;
+    padding: 0;
+  }
+  .cla6{
+    color: rgb(57,211,241);
+  }

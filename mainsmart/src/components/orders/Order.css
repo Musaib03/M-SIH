@@ -1,0 +1,30 @@
+.o{
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.send{
+    background-color: red;
+    color: white;
+    width: 42px;
+    font-weight: bold;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.rec{
+    background-color:green;
+    color: white;
+    width: 70px;
+    font-weight: bold;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+}
+.o1{
+    position: relative;
+    margin-left: 40px;
+    width: 200px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
