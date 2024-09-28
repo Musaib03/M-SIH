@@ -1,3 +1,11 @@
 .side{
     background-color: white;
 }
+.head{
+    font-weight: bold;
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    margin-left: 55px;
+    font-family: cursive;
+}

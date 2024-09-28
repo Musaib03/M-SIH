@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Home.css';
 import Header from "../components/common/Header";
 import StatCard from '../components/common/StatCard';
+import Sales from "C:/Users/Musaib Maqbool Wani/Desktop/SIHF/M-SIH/mainsmart/src/components/overview/SalesOverviewChart.jsx"
 import {  DollarSign} from "lucide-react";
 const Overview = () => {
   const [transactions, setTransactions] = useState([]);
@@ -52,10 +53,13 @@ const Overview = () => {
 
   return (
     <div className='flex-1 relative z-10 overflow-auto'>
-      <Header title="Live Ethereum Transactions" />
+      <Header title="Live  Transactions" />
       <div  className="o11">
 		<StatCard name='Transaction(24H)' icon={DollarSign} value={115118} color='#EF4444' />
 		</div>
+    <div>
+      <Sales/>
+    </div>
       <div className='home'>
       
         <div className='overflow-x-auto'>

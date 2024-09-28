@@ -53,7 +53,7 @@ function AnalyticPage() {
         <button type="submit" className="submit-button">Search</button>
       </form>
 
-      <h2>Results</h2>
+    
       {results.length > 0 ? (
         <table className="results-table">
           <thead>
@@ -76,7 +76,7 @@ function AnalyticPage() {
           </tbody>
         </table>
       ) : (
-        <p>No results found</p>
+       <></>
       )}
     </div>
     </div>

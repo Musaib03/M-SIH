@@ -36,10 +36,12 @@ const Sidebar = () => {
 					onClick={() => setIsSidebarOpen(!isSidebarOpen)}
 					className='p-2 rounded-full hover:bg-gray-700 transition-colors max-w-fit'
 				>
+					
 					<Menu size={24} />
 				</motion.button>
-
+				<h1 className="head">Node-Nexus</h1>
 				<nav className='mt-8 flex-grow'>
+					
 					{SIDEBAR_ITEMS.map((item) => (
 						<Link key={item.href} to={item.href}>
 							<motion.div className='flex items-center p-4 text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors mb-2'>

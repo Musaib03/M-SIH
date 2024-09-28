@@ -24,7 +24,7 @@ const SalesOverviewChart = () => {
 			animate={{ opacity: 1, y: 0 }}
 			transition={{ delay: 0.2 }}
 		>
-			<h2 className='text-lg font-medium mb-4 text-gray-100'>Sales Overview</h2>
+			
 
 			<div className='h-80'>
 				<ResponsiveContainer width={"100%"} height={"100%"}>

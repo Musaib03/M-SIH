@@ -2,3 +2,57 @@
 	color: white;
 	
 }
+.sett1{
+	position: relative;
+	width: 500px;
+	color: black;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 3px;
+}
+.btne{
+	width: 40%;
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #007BFF;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  .btne:hover {
+	background-color: #0056b3;
+  }
+  .li{
+	display: flex;
+	background-color: whitesmoke;
+	color: black;
+	width: 50%;
+	position: relative;
+	
+	margin-left: 300px;
+	border-radius: 5px;
+  }
+  .lii{
+	display: flex;
+	top: 10px;
+		background-color: whitesmoke;
+	color: black;
+	width: 50%;
+	position: relative;
+
+	margin-left: 300px;
+	border-radius: 5px;
+  }
+  .liii{
+	display: flex;
+	top: 30px;
+		background-color:red;
+	color: black;
+	width: 50%;
+	position: relative;
+
+	margin-left: 300px;
+	border-radius: 5px;
+  }
